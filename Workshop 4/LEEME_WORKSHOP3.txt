@@ -1,0 +1,15 @@
+WORKSHOP 3 - CRUD DE CURSOS
+
+1) Este ZIP contiene el proyecto COMPLETO: incluye la base de login previamente probada y el CRUD de cursos.
+2) Copiar su CONTENIDO a C:\xampp\htdocs\Programacion-Web-I\Workshop 3\ (reemplazar archivos). No borrar la base de datos.
+3) En phpMyAdmin seleccionar workshop3, abrir SQL e importar/ejecutar SOLO courses_schema.sql.
+   No volver a importar los esquemas de usuarios si ya funcionan.
+4) Abrir http://localhost/Programacion-Web-I/Workshop%203/
+5) Iniciar sesión y elegir Cursos. Probar crear, editar y eliminar.
+6) Verificar que el botón Eliminar envíe POST (actions/course_delete.php).
+7) Subir carpeta Workshop 3 a tu repositorio GitHub.
+
+Base de datos: workshop3 / MySQL puerto 3307 / root / contraseña vacía.
+La tabla courses incluye ID interno autoincremental y los 5 atributos pedidos.
+career_id es un entero; no se presupone una tabla de carreras inexistente en el enunciado.
+IMPORTANTE: No uses datos reales sensibles; es un proyecto de clase.
