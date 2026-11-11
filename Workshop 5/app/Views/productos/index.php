@@ -1,0 +1,8 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Workshop 5 | Productos</title><style>body{font-family:Arial,sans-serif;max-width:900px;margin:35px auto;padding:0 15px;color:#172235}table{width:100%;border-collapse:collapse;margin-top:20px}th,td{padding:12px;border-bottom:1px solid #ddd;text-align:left}a,.btn{display:inline-block;padding:8px 12px;border-radius:5px;background:#175cd3;color:white;text-decoration:none;border:0;cursor:pointer}button.danger{background:#b42318}.notice{padding:12px;background:#d1fadf}</style></head><body>
+<h1>CRUD de productos</h1><p>Workshop 5 — CodeIgniter 4 (MVC)</p>
+<?php if(session()->getFlashdata('mensaje')): ?><p class="notice"><?= esc(session()->getFlashdata('mensaje')) ?></p><?php endif ?>
+<a href="<?= site_url('productos/nuevo') ?>">+ Nuevo producto</a>
+<table><thead><tr><th>ID</th><th>Nombre</th><th>Descripción</th><th>Precio</th><th>Cantidad</th><th>Acciones</th></tr></thead><tbody>
+<?php foreach($productos as $p): ?><tr><td><?= (int)$p['id'] ?></td><td><?= esc($p['nombre']) ?></td><td><?= esc($p['descripcion']) ?></td><td>₡<?= number_format((float)$p['precio'],2) ?></td><td><?= (int)$p['cantidad'] ?></td><td><a href="<?= site_url('productos/editar/'.$p['id']) ?>">Editar</a> <form action="<?= site_url('productos/eliminar/'.$p['id']) ?>" method="post" style="display:inline" onsubmit="return confirm('¿Eliminar producto?')"><?= csrf_field() ?><button class="btn danger" type="submit">Eliminar</button></form></td></tr><?php endforeach ?>
+<?php if(!$productos): ?><tr><td colspan="6">Todavía no hay productos.</td></tr><?php endif ?>
+</tbody></table></body></html>

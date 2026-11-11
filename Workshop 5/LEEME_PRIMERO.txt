@@ -1,0 +1,13 @@
+WORKSHOP 5 - CRUD MVC CODEIGNITER 4
+1. Descargar CodeIgniter 4 APPSTARTER como ZIP desde https://github.com/codeigniter4/appstarter/releases o https://github.com/codeigniter4/appstarter (Code > Download ZIP). ATENCION: el ZIP de codigo fuente appstarter normalmente NO incluye vendor/; necesita Composer para instalar dependencias. Para evitar Composer, descargar un paquete de distribucion oficial de CodeIgniter 4 con system/ y app/ desde https://github.com/codeigniter4/framework/releases (archivo de distribucion, no Source code).
+2. Extraer el paquete de distribucion en la carpeta "Workshop 5". Verificar que existan app/, public/, system/, spark, writable/.
+3. Copiar la carpeta app/ de este ZIP encima de app/ del framework, sin borrar los demas archivos.
+4. Agregar las lineas de RUTAS_PARA_ROUTES.php.txt al final de app/Config/Routes.php.
+5. Copiar env (si existe) a .env y configurar los valores de CONFIGURACION_ENV.txt. NO subir .env.
+6. Crear BD workshop5 en phpMyAdmin (MySQL puerto 3307): CREATE DATABASE workshop5 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+7. En terminal dentro de Workshop 5: php spark migrate ; php spark serve
+   Si 'php' no se reconoce: C:\xampp\php\php.exe spark migrate ; C:\xampp\php\php.exe spark serve
+8. Abrir http://localhost:8080/productos
+9. Probar crear, listar, editar, eliminar.
+10. git add "Workshop 5" ; git commit -m "Workshop 5 CRUD CodeIgniter MVC" ; git push
+IMPORTANTE: No subir .env, credenciales, ni archivos de writable/logs. El proyecto necesita la distribucion de CodeIgniter 4; este ZIP contiene el codigo del CRUD y no incluye el framework.
